@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#B93D3C</color>
+    <color name="grey">#808080</color>
+    <color name="colorPrimary">#B93D3C</color>
+
+    <color name="colorAccent">#D81B60</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="_bg__frame_2_ek2_color">#000000</color>
+    <color name="rectangle_20_color">#FFFFFF</color>
+    <color name="rectangle_14_color">#B93D3C</color>
+    <color name="rectangle_16_color">#E2E2E2</color>
+    <color name="rectangle_12_color">#E6E6E6</color>
+
+    <color name="_bg__iphone_14_plus___1_ek2_color">#FFFFFF</color>
+    <color name="categorias_color">#B93D3C</color>
+    <color name="rectangle_15_color">#F2F2F2</color>
+    <color name="bolo_de_chocolate_color">#000000</color>
+    <color name="rectangle_25_color">#858585</color>
+    <color name="__56_avalia__es__color">#DADADA</color>
+
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/menu_home">
+
+    <activity
+        android:id="@+id/menu_home"
+        android:name="com.app.bosquepanetteriaapp.HomeActivity"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <activity
+        android:id="@+id/menu_cardapio"
+        android:name="com.app.bosquepanetteriaapp.CardapioActivity"
+        android:label="fragment_pedidos"
+        tools:layout="@layout/fragment_cardapio" />
+    <activity
+        android:id="@+id/menu_pedidos"
+        android:name="com.app.bosquepanetteriaapp.PedidosActivity"
+        android:label="fragment_pedido"
+        tools:layout="@layout/fragment_pedidos" />
+    <activity
+        android:id="@+id/menu_carrinho"
+        android:name="com.app.bosquepanetteriaapp.CartActivity"
+        android:label="fragment_carrinho"
+        tools:layout="@layout/fragment_cart"/>
+
+</navigation>

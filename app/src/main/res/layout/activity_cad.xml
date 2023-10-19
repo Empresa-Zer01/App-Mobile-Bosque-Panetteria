@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".CadActivity">
+
+    <RelativeLayout
+        android:id="@+id/content_container"
+        android:layout_width="wrap_content"
+        android:layout_height="750dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/criarconta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/leaguespartanmedium"
+            android:gravity="center"
+            android:text="@string/criar_conta_string"
+            android:textColor="@color/_bg__frame_2_ek2_color"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/sejabemvindo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/criarconta"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/leaguespartanregular"
+            android:gravity="center"
+            android:text="@string/seja_bem_vindo_string"
+            android:textColor="@color/_bg__frame_2_ek2_color"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rectangle_21"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/sejabemvindo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            app:boxBackgroundColor="@color/rectangle_15_color"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_person_24"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/leaguespartanregular"
+                android:hint="@string/usuario_string"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textColor="@color/_bg__frame_2_ek2_color"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rectangle_12_ek2"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/rectangle_21"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            app:boxBackgroundColor="@color/rectangle_15_color"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_email_24"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/leaguespartanregular"
+                android:hint="@string/email_string"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rectangle_12_ek1"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/rectangle_12_ek2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            app:boxBackgroundColor="@color/rectangle_15_color"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTelefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_phone_24"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/leaguespartanregular"
+                android:hint="@string/telefone_string"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:textColor="@color/_bg__frame_2_ek2_color"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rectangle_12"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/rectangle_12_ek1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            app:boxBackgroundColor="@color/rectangle_15_color"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_lock_24"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/leaguespartanregular"
+                android:hint="@string/senha_string"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/_bg__frame_2_ek2_color"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rectangle_18"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/rectangle_12"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            app:boxBackgroundColor="@color/rectangle_15_color"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editConfirmarSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_password_24"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/leaguespartanregular"
+                android:hint="@string/confirmar_senha_string"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/_bg__frame_2_ek2_color"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--<CheckBox
+            android:id="@+id/politicaprivacidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rectangle_18"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/leaguespartanmedium"
+            android:text="@string/concordo_com_a_politica_de_privacidade_string"
+            android:textColor="@color/grey"
+            android:textSize="15sp" />-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rectangle_18"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="5dp">
+
+            <Button
+                android:id="@+id/btn_cadastrar"
+                android:layout_width="310dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rectangle_18"
+                android:fontFamily="@font/leaguespartanmedium"
+                android:text="@string/cadastrar"
+                android:background="@drawable/rectangle_25_shape"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cv_cadastro"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/jatemconta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/leaguespartanregular"
+                android:text="@string/ja_tem_conta_string"
+                android:textColor="@color/_bg__frame_2_ek2_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/btnentreaqui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/jatemconta"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/leaguespartanregular"
+                android:onClick="onButtonClick"
+                android:paddingHorizontal="2dp"
+                android:text="@string/entre_aqui"
+                android:textColor="@color/red"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

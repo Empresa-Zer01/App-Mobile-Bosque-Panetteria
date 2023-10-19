@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CardapioActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btnv"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:theme="@style/Theme.MaterialComponents"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@color/colorPrimary"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_main" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtview_cardapio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/leaguespartanmedium"
+                android:gravity="center"
+                android:text="Cardápio"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <RelativeLayout
+                android:id="@+id/container_src_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_below="@+id/txtview_cardapio"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/toolbar_cardapio"
+                    android:layout_width="325dp"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="5dp">
+
+                    <com.google.android.material.search.SearchBar
+                        android:id="@+id/srcbar"
+                        android:layout_width="325dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#FFFFFF"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:hint="Pesquisar"
+                        app:navigationIconTint="@color/colorPrimary" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/toolbar_cardapio"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="5dp">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rectangle_25_shape"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/baseline_filter_list_24"
+                        android:tint="@color/white" />
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="560dp"
+                android:layout_below="@+id/container_src_filter"
+                android:layout_marginTop="0dp"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view_item_cardapio"
+                    android:layout_width="180dp"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="22dp"
+                    android:background="@drawable/rectangle_12_shape"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="5dp">
+
+                    <ImageView
+                        android:id="@+id/view3"
+                        android:layout_width="170dp"
+                        android:layout_height="120dp"
+                        android:layout_alignStart="@+id/view_item_cardapio"
+                        android:layout_alignTop="@+id/view_item_cardapio"
+                        android:layout_alignEnd="@+id/view_item_cardapio"
+                        android:layout_gravity="top"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rectangle_13_shape"
+                        android:elevation="2dp"
+                        android:src="@drawable/_0698" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/view_item_cardapio"
+                        android:layout_alignEnd="@+id/view_item_cardapio"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:elevation="5dp"
+                        android:src="@drawable/baseline_favorite_border_24" />
+
+                    <TextView
+                        android:id="@+id/name_prod_cardapio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view3"
+                        android:layout_alignStart="@+id/view_item_cardapio"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="130dp"
+                        android:fontFamily="@font/leaguespartanmedium"
+                        android:text="Bauru"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/desc_prod_cardapio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="160dp"
+                        android:fontFamily="@font/leaguespartanregular"
+                        android:text="Um Bauru muito gostoso"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/price_prod_cardapio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name_prod_cardapio"
+                        android:layout_alignStart="@+id/view_item_cardapio"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="200dp"
+                        android:fontFamily="@font/leaguespartanbold"
+                        android:text="R$ 8,00"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+
+                    <ImageButton
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/name_prod_cardapio"
+                        android:layout_alignEnd="@+id/view_item_cardapio"
+                        android:layout_marginStart="130dp"
+                        android:layout_marginTop="200dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/border_shape"
+                        android:backgroundTint="#B93D3C"
+                        android:src="@drawable/ic_add_24"
+                        app:tint="@color/white" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view_item_cardapio2"
+                    android:layout_width="180dp"
+                    android:layout_height="250dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_toEndOf="@+id/view_item_cardapio"
+                    android:background="@drawable/rectangle_12_shape"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="5dp">
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view_item_cardapio3"
+                    android:layout_width="180dp"
+                    android:layout_height="250dp"
+                    android:layout_below="@+id/view_item_cardapio"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rectangle_12_shape"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="5dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="180dp"
+                    android:layout_height="250dp"
+                    android:layout_below="@+id/view_item_cardapio2"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/view_item_cardapio3"
+                    android:background="@drawable/rectangle_12_shape"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="5dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".CartActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btnv"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:theme="@style/Theme.MaterialComponents"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@color/colorPrimary"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_main" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="850dp">
+
+            <TextView
+                android:id="@+id/cartTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/leaguespartanmedium"
+                android:text="Carrinho de Compras"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+                <ListView
+                    android:id="@+id/cartListView"
+                    android:layout_width="380dp"
+                    android:layout_height="400dp"
+                    android:layout_below="@+id/cartTitleTextView"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_total_price"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cartListView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <View
+                    android:layout_width="380dp"
+                    android:layout_height="200dp"
+                    android:backgroundTint="#E4E4E4" />
+
+                <TextView
+                    android:id="@+id/precoprod_txtview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/leaguespartanmedium"
+                    android:gravity="center"
+                    android:text="Preço do Produto: R$ 0.00"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/frete_txtview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/leaguespartanmedium"
+                    android:gravity="center"
+                    android:text="Frete: R$ 0.00"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="320dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35dp"
+                    android:background="#515151" />
+
+                <TextView
+                    android:id="@+id/total_txtview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/leaguespartanmedium"
+                    android:gravity="center"
+                    android:text="Total: R$ 0.00"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cv_total_price"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="100dp"
+                app:cardElevation="5dp">
+
+                <Button
+                    android:id="@+id/checkoutButton"
+                    android:layout_width="360dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rectangle_25_shape"
+                    android:fontFamily="@font/leaguespartanmedium"
+                    android:gravity="center"
+                    android:text="Finalizar Compra"
+                    android:textSize="20sp" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

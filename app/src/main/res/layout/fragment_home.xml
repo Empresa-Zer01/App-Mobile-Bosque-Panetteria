@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/btnv"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:theme="@style/Theme.MaterialComponents"
+            app:itemIconTint="@color/colorPrimary"
+            app:itemTextColor="@color/colorPrimary"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/menu_main" />
+
+        <ScrollView
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="870dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    android:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <ImageView
+                    android:id="@+id/btn_menu_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_toStartOf="@+id/seuendereco"
+                    android:clickable="true"
+                    android:src="@drawable/ic_menu_barra" />
+
+                </androidx.appcompat.widget.Toolbar>
+                
+                </LinearLayout>
+        
+                <TextView
+                    android:id="@+id/seuendereco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/leaguespartanregular"
+                    android:text="Seu endereço"
+                    android:textColor="@color/categorias_color"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/notificacoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@+id/seuendereco"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_notificacao" />
+
+                <TextView
+                    android:id="@+id/txt_nome_usu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seuendereco"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="45dp"
+                    android:fontFamily="@font/leaguespartanmedium"
+                    android:text="Olá, Usuário!"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/txt_dsc_usu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_nome_usu"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/leaguespartanregular"
+                    android:shadowColor="@color/black"
+                    android:text="O que gostaria de pedir hoje?"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/categorias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_dsc_usu"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/leaguespartanregular"
+                    android:text="@string/categorias_string"
+                    android:textColor="#B83D3C"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/promo__es"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/horizontal_scroll_view"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/leaguespartanregular"
+                    android:text="@string/promo__es_string"
+                    android:textColor="@color/categorias_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/recomendados"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/frame_1"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/leaguespartanregular"
+                    android:text="Recomendados"
+                    android:textColor="@color/categorias_color"
+                    android:textSize="16sp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/frame_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/promo__es"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="18dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/image_19"
+                            android:layout_width="240dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_toEndOf="@+id/image_18"
+                            android:contentDescription="image_19"
+                            android:src="@drawable/image_19" />
+
+                        <ImageView
+                            android:id="@+id/image_18"
+                            android:layout_width="240dp"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="image_18"
+                            android:src="@drawable/image_18" />
+
+                    </RelativeLayout>
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontal_scroll_view_frame_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recomendados"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="18dp">
+
+                    <RelativeLayout
+                        android:id="@+id/frame_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/image_22"
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="image_22"
+                            android:src="@drawable/image_22" />
+
+                        <ImageView
+                            android:id="@+id/image_23"
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/image_22"
+                            android:contentDescription="image_23"
+                            android:src="@drawable/image_23" />
+
+                    </RelativeLayout>
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontal_scroll_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/categorias"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="18dp">
+
+                    <RelativeLayout
+                        android:id="@+id/frame_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_paes"
+                            android:layout_width="70dp"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="5dp"
+                            app:cardCornerRadius="40dp"
+                            app:cardElevation="0dp">
+
+                            <View
+                                android:layout_width="70dp"
+                                android:layout_height="60dp"
+                                android:background="#E86B6A" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/ic_paes" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cv_paes"
+                            android:layout_alignEnd="@+id/cv_paes"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:fontFamily="@font/leaguespartanregular"
+                            android:gravity="center_horizontal"
+                            android:text="Pães"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_salgados"
+                            android:layout_width="70dp"
+                            android:layout_height="55dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/cv_paes"
+                            app:cardCornerRadius="40dp"
+                            app:cardElevation="0dp">
+
+                            <View
+                                android:layout_width="70dp"
+                                android:layout_height="60dp"
+                                android:background="#E86B6A" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/ic_salgado" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cv_salgados"
+                            android:layout_alignStart="@+id/cv_salgados"
+                            android:layout_alignEnd="@+id/cv_salgados"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:fontFamily="@font/leaguespartanregular"
+                            android:gravity="center_horizontal"
+                            android:text="Salgados"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_tortas2"
+                            android:layout_width="70dp"
+                            android:layout_height="55dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/cv_salgados"
+                            app:cardCornerRadius="40dp"
+                            app:cardElevation="0dp">
+
+                            <View
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent"
+                                android:background="#E86B6A" />
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/ic_tortas" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cv_tortas2"
+                            android:layout_alignStart="@+id/cv_tortas2"
+                            android:layout_alignEnd="@+id/cv_tortas2"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:fontFamily="@font/leaguespartanregular"
+                            android:gravity="center_horizontal"
+                            android:text="Tortas"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/doces"
+                            android:layout_width="70dp"
+                            android:layout_height="55dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/cv_tortas2"
+                            app:cardCornerRadius="40dp"
+                            app:cardElevation="0dp">
+
+                            <View
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent"
+                                android:background="#E86B6A" />
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/ic_doce_2" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/doces"
+                            android:layout_alignStart="@+id/doces"
+                            android:layout_alignEnd="@+id/doces"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:fontFamily="@font/leaguespartanregular"
+                            android:gravity="center_horizontal"
+                            android:text="Doces"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_bolo"
+                            android:layout_width="70dp"
+                            android:layout_height="55dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/doces"
+                            app:cardCornerRadius="40dp"
+                            app:cardElevation="0dp">
+
+                            <View
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent"
+                                android:background="#E86B6A" />
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/ic_bolos" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cv_bolo"
+                            android:layout_alignStart="@id/cv_bolo"
+                            android:layout_alignEnd="@id/cv_bolo"
+                            android:layout_marginStart="0dp"
+                            android:fontFamily="@font/leaguespartanregular"
+                            android:gravity="center_horizontal"
+                            android:text="Bolos"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_bebidas"
+                            android:layout_width="70dp"
+                            android:layout_height="55dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_toEndOf="@+id/cv_bolo"
+                            app:cardCornerRadius="40dp"
+                            app:cardElevation="0dp">
+
+                            <View
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent"
+                                android:background="#E86B6A" />
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/ic_bebida" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cv_bebidas"
+                            android:layout_alignStart="@id/cv_bebidas"
+                            android:layout_alignEnd="@id/cv_bebidas"
+                            android:layout_marginStart="0dp"
+                            android:fontFamily="@font/leaguespartanregular"
+                            android:gravity="center_horizontal"
+                            android:text="Bebidas"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+                </HorizontalScrollView>
+
+                <FrameLayout
+                    android:id="@+id/fragment_container_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/menu_burguer_header"
+            app:itemIconTint="@color/colorPrimary"
+            app:itemTextColor="@color/black"
+            android:backgroundTint="@color/white"
+            app:menu="@menu/menu_burguer" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "457503691373",
+    "project_id": "bosquepanetteriaapp",
+    "storage_bucket": "bosquepanetteriaapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457503691373:android:f63801c160efa742e52564",
+        "android_client_info": {
+          "package_name": "com.app.bosquepanetteriaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "457503691373-v8s47p2121i4dpatnipvge7o4g3hfsch.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.bosquepanetteriaapp",
+            "certificate_hash": "cf7d7cdcdc21e4db111c7ee269f0da2715ee6e8a"
+          }
+        },
+        {
+          "client_id": "457503691373-cbnf9gqrcmqp5n2dv65cudmqt6cgt5l7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrZuOrfeP0zGTYOCTeYywUZgdut8xGix8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "457503691373-cbnf9gqrcmqp5n2dv65cudmqt6cgt5l7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

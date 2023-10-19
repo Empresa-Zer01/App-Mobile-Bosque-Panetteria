@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:gravity="bottom"
+    android:padding="16dp"
+    android:background="@color/colorPrimary"
+    android:theme="@style/ThemeOverlay.Material3">
+
+    <ImageView
+        android:id="@+id/menu_burguer_ftusu"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/baseline_person_24"/>
+    <TextView
+        android:id="@+id/menu_burguer_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Nome do Usuário"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:fontFamily="@font/leaguespartanmedium"/>
+    <TextView
+        android:id="@+id/menu_burguer_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="usuario@gmail.com"
+        android:textColor="@color/white"
+        android:fontFamily="@font/leaguespartanregular"
+        android:textSize="18sp"/>
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_bottom_bar_home">Inicio</string>
+    <string name="menu_bottom_bar_pedidos">Pedidos</string>
+    <string name="menu_bottom_bar_conta">Conta</string>
+</resources>
