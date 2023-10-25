@@ -1,100 +1,57 @@
 package com.app.bosquepanetteriaapp
 
 import android.content.Intent
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import android.graphics.Color
 import android.os.AsyncTask
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
+import android.view.View
+import android.widget.ImageView
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
 import org.json.JSONArray
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class HomeActivity : Fragment() {
+class HomeActivity : AppCompatActivity() {
 
-    private lateinit var drawerLayout: DrawerLayout
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.fragment_home)
+        window.statusBarColor = Color.TRANSPARENT
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val rootView = inflater.inflate(R.layout.fragment_home, container, false)
-
-        activity?.window?.statusBarColor = Color.TRANSPARENT
-
-        val bottomNavigationView: BottomNavigationView = rootView.findViewById(R.id.btnv)
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.btnv)
         bottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
         bottomNavigationView.menu.findItem(R.id.menu_home).isChecked = true
 
-        val btnMenuHome = rootView.findViewById<ImageView>(R.id.btn_menu_home)
-        drawerLayout = rootView.findViewById(R.id.drawer_layout)
+        val btnMenuHome = findViewById<ImageView>(R.id.btn_menu_home)
+        val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
 
-        val navigationView: NavigationView = rootView.findViewById(R.id.nav_view)
-        (activity as AppCompatActivity).setSupportActionBar(rootView.findViewById(R.id.toolbar_home))
-
-        val toggle = ActionBarDrawerToggle(
-            activity, drawerLayout, R.string.open_nav, R.string.close_nav
-        )
-        drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
-
-        if (savedInstanceState == null) {
-            childFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container_home, PlaceholderFragment())
-                .commit()
-            navigationView.setCheckedItem(R.id.nav_conta)
-        }
-
-        btnMenuHome.setOnClickListener {
-            drawerLayout.openDrawer(androidx.core.view.GravityCompat.START)
-        }
-
-        navigationView.setNavigationItemSelectedListener { menuItem ->
-            drawerLayout.closeDrawers()
-
-            when (menuItem.itemId) {
-                R.id.nav_conta -> {
-                    // Adicione a lógica para a ação "Minha Conta" aqui
-                    return@setNavigationItemSelectedListener true
-                }
-                // Adicione mais casos conforme necessário
-                else -> return@setNavigationItemSelectedListener false
-            }
-        }
-        return rootView
     }
 
     private val onNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_home -> {
-                    // Remova esta parte para evitar a reinicialização da atividade atual
-                    return@OnNavigationItemSelectedListener false
+                    startActivity(Intent(this, HomeActivity::class.java))
+                    return@OnNavigationItemSelectedListener true
                 }
 
                 R.id.menu_cardapio -> {
-                    startActivity(Intent(activity, CardapioActivity::class.java))
+                    startActivity(Intent(this, CardapioActivity::class.java))
                     return@OnNavigationItemSelectedListener true
                 }
 
                 R.id.menu_pedidos -> {
-                    startActivity(Intent(activity, PedidosActivity::class.java))
+                    startActivity(Intent(this, PedidosActivity::class.java))
                     return@OnNavigationItemSelectedListener true
                 }
 
                 R.id.menu_carrinho -> {
-                    startActivity(Intent(activity, CartActivity::class.java))
+                    startActivity(Intent(this, CartActivity::class.java))
                     return@OnNavigationItemSelectedListener true
                 }
             }
@@ -102,11 +59,7 @@ class HomeActivity : Fragment() {
         }
 
     fun openCartActivity(view: View) {
-        // Obtenha o valor do item de alguma forma (substitua isso pela sua lógica)
-        val itemValue: String = "Valor do item"
-
-        val intent = Intent(activity, CartActivity::class.java)
-        intent.putExtra("item_value", itemValue)
+        val intent = Intent(this, CartActivity::class.java)
         startActivity(intent)
     }
 
@@ -159,7 +112,7 @@ class HomeActivity : Fragment() {
             // Atualize a interface do usuário com os resultados após a conclusão da tarefa em segundo plano
             if (result != null) {
                 val adapter = ProductAdapter(result) { productId ->
-                    val intent = Intent(activity, ProductDetailActivity::class.java)
+                    val intent = Intent(this@HomeActivity, ProductDetailActivity::class.java)
                     intent.putExtra(
                         "productId",
                         productId
@@ -170,9 +123,5 @@ class HomeActivity : Fragment() {
                 recyclerView.adapter = adapter
             }
         }
-    }
-
-    class PlaceholderFragment : Fragment() {
-        // Adicione qualquer lógica específica do fragmento aqui
     }
 }
