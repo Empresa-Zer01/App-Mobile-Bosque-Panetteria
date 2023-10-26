@@ -5,11 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cardCornerRadius="20dp">
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -21,7 +16,7 @@
                 android:id="@+id/menu_burguer_ftusu"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/img_usu"/>
+                android:src="@drawable/rectangle_5_shape" />
 
             <TextView
                 android:id="@+id/menu_burguer_usuario"
@@ -46,6 +41,5 @@
                 android:textSize="18sp" />
 
         </RelativeLayout>
-    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
