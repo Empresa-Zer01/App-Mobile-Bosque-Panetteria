@@ -134,7 +134,7 @@
                     android:id="@+id/promo__es"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/horizontal_scroll_view"
+                    android:layout_below="@+id/scroll_categ"
                     android:layout_alignParentStart="true"
                     android:layout_marginStart="25dp"
                     android:layout_marginTop="35dp"
@@ -147,7 +147,7 @@
                     android:id="@+id/recomendados"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/frame_1"
+                    android:layout_below="@+id/scroll_promo"
                     android:layout_alignParentStart="true"
                     android:layout_marginStart="25dp"
                     android:layout_marginLeft="30dp"
@@ -158,7 +158,7 @@
                     android:textSize="16sp" />
 
                 <HorizontalScrollView
-                    android:id="@+id/frame_1"
+                    android:id="@+id/scroll_promo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/promo__es"
@@ -191,7 +191,7 @@
                 </HorizontalScrollView>
 
                 <HorizontalScrollView
-                    android:id="@+id/horizontal_scroll_view_frame_2"
+                    android:id="@+id/scroll_recom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/recomendados"
@@ -225,7 +225,7 @@
                 </HorizontalScrollView>
 
                 <HorizontalScrollView
-                    android:id="@+id/horizontal_scroll_view"
+                    android:id="@+id/scroll_categ"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/categorias"

@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import android.view.View
+import android.widget.HorizontalScrollView
 import android.widget.ImageView
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -29,6 +30,9 @@ class HomeActivity : AppCompatActivity() {
 
         val btnMenuHome = findViewById<ImageView>(R.id.btn_menu_home)
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
+
+        val horizontalScrollView = findViewById<HorizontalScrollView>(R.id.scroll_categ)
+        horizontalScrollView.setHorizontalScrollBarEnabled(false)
 
     }
 
